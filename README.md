@@ -19,6 +19,8 @@ Using HTTPS:
 
 `git clone https://github.com/egijasp/Financial-Relationship-Tracker.git`
 
+Navigate to the project directory:
+
 `cd Financial-Relationship-Tracker`
 
 ### Install dependencies:
