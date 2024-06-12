@@ -6,12 +6,14 @@ import { people } from './mock-data';
   providedIn: 'root',
 })
 export class TransactionService {
-  private people: Person[] = JSON.parse(localStorage.getItem('people') || '[]');
+  private people: Person[] = JSON.parse(
+    sessionStorage.getItem('people') || '[]'
+  );
 
   constructor() {
     if (!this.people || this.people.length === 0) {
       this.people = people;
-      this.updateLocalStorage();
+      this.updateSessionStorage();
     }
   }
 
@@ -19,8 +21,8 @@ export class TransactionService {
     return this.people;
   }
 
-  updateLocalStorage(): void {
-    localStorage.setItem('people', JSON.stringify(this.people));
+  updateSessionStorage(): void {
+    sessionStorage.setItem('people', JSON.stringify(this.people));
   }
 
   transactionHistory(transaction: Transaction): string {
