@@ -11,8 +11,9 @@ You can try it out: https://financial-relationship-tracker.vercel.app/
 
 ### Clone the repository
 
-`git clone https://github.com/your-username/loan-management-system.git`
-`cd loan-management-system`
+`git clone git@github.com:egijasp/Financial-Relationship-Tracker.git`
+
+`cd Financial-Relationship-Tracker`
 
 ### Install dependencies:
 
