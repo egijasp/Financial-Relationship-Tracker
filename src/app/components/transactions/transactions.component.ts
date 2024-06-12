@@ -183,20 +183,30 @@ export class TransactionsComponent implements OnInit, OnDestroy {
             v.forEach((person) => {
               if (person.id === from.id) {
                 person.debt -= amount;
+
                 const transaction = person.transactions.find(
                   (t) => t.borrowerId === from.id && t.lenderId === to.id
-                )?.id;
-                person.transactions = person.transactions.filter(
-                  (t) => t.id !== transaction
                 );
+
+                // remove transaction only if amount is equal to transaction amount
+                transaction && transaction?.amount !== amount
+                  ? (transaction.amount -= amount)
+                  : (person.transactions = person.transactions.filter(
+                      (t) => t.id !== transaction?.id
+                    ));
               } else if (person.id === to.id) {
                 person.loan -= amount;
+
                 const transaction = person.transactions.find(
                   (t) => t.borrowerId === from.id && t.lenderId === to.id
-                )?.id;
-                person.transactions = person.transactions.filter(
-                  (t) => t.id !== transaction
                 );
+
+                // remove transaction only if amount is equal to transaction amount
+                transaction && transaction?.amount !== amount
+                  ? (transaction.amount -= amount)
+                  : (person.transactions = person.transactions.filter(
+                      (t) => t.id !== transaction?.id
+                    ));
               }
             });
             break;
