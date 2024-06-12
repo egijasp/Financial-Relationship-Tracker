@@ -5,7 +5,7 @@ The application allows users to manage loans and debts between individuals, trac
 
 ### Visit
 
-You can try it out: [https://financial-relationship-tracker.vercel.app/]
+You can try it out: https://financial-relationship-tracker.vercel.app/
 
 ## Setup instructions
 
