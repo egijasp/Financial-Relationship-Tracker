@@ -1,4 +1,4 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Person, Transaction } from './transaction';
 import { people } from './mock-data';
 

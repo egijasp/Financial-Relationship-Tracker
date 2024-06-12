@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit, computed, signal } from '@angular/core';
+import { Component, OnDestroy, OnInit, signal } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
@@ -214,7 +214,7 @@ export class TransactionsComponent implements OnInit, OnDestroy {
         return v;
       });
 
-      this.financeService.updateLocalStorage();
+      this.financeService.updateSessionStorage();
       this.form.reset();
     }
   }
