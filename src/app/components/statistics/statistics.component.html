@@ -4,7 +4,8 @@
       <mat-card-title><strong>Largest lender</strong></mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      @if(largestLoan.length > 0) { @for (lender of largestLoan; track lender) {
+      @if(financeService.largestLender().length > 0) { @for (lender of
+      financeService.largestLender(); track lender) {
       <p>
         <strong>{{ lender.name + " with €" + lender.loan }}</strong>
       </p>
@@ -18,9 +19,8 @@
       <mat-card-title><strong>Largest borrower</strong></mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      @if (largestDebt.length > 0) { @for (borrower of largestDebt; track
-      borrower) {
-
+      @if (financeService.largestBorrower().length > 0) { @for (borrower of
+      financeService.largestBorrower(); track borrower) {
       <p>
         <strong>{{ borrower.name + " with €" + borrower.debt }}</strong>
       </p>

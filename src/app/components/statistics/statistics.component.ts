@@ -10,8 +10,5 @@ import { MatCardModule } from '@angular/material/card';
   styleUrl: './statistics.component.scss',
 })
 export class StatisticsComponent {
-  readonly largestDebt = this.financeService.largestBorrower();
-  readonly largestLoan = this.financeService.largestLender();
-
-  constructor(private financeService: TransactionService) {}
+  constructor(public financeService: TransactionService) {}
 }
