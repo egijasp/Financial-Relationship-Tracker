@@ -1,0 +1,49 @@
+h2 {
+  font-size: 1.2rem;
+}
+
+p {
+  margin: 0;
+}
+
+.title {
+  padding: 1rem 0 0.8rem;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.person__content {
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.person__name {
+  padding-top: 0.8rem;
+}
+
+.person__list {
+  padding-left: 1.8rem;
+  margin: 0.4rem 0;
+}
+
+.person__transactionsTotal {
+  padding-bottom: 0.8rem;
+}
+
+.person__button {
+  align-self: flex-end;
+}
+
+.paginator {
+  background: #fff;
+}
+
+@media (min-width: 900px) {
+  .person__content {
+    font-size: 0.9rem;
+  }
+}

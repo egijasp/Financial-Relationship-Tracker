@@ -1,0 +1,32 @@
+<div class="container flex">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title><strong>Largest lender</strong></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      @if(largestLoan.length > 0) { @for (lender of largestLoan; track lender) {
+      <p>
+        <strong>{{ lender.name + " with €" + lender.loan }}</strong>
+      </p>
+      } } @else {
+      <p>No lenders</p>
+      }
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title><strong>Largest borrower</strong></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      @if (largestDebt.length > 0) { @for (borrower of largestDebt; track
+      borrower) {
+
+      <p>
+        <strong>{{ borrower.name + " with €" + borrower.debt }}</strong>
+      </p>
+      } } @else {
+      <p>No borrowers</p>
+      }
+    </mat-card-content>
+  </mat-card>
+</div>

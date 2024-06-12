@@ -1,0 +1,22 @@
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  margin: 0 0.2rem;
+  background: #008bbb;
+  color: #fff;
+  padding: 1rem;
+}
+
+.container {
+  padding: 4rem 0 1rem;
+}
+
+@media (min-width: 900px) {
+  .container {
+    width: 60%;
+  }
+}

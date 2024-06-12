@@ -1,0 +1,39 @@
+<div class="container flex">
+  <h2 class="title">Person list/Transactions</h2>
+  <div class="person__content">
+    @for (person of pagedPersons; track person.name) {
+    <p class="person__name">
+      <strong>{{ person.name }}</strong>
+    </p>
+    <ul class="person__list">
+      @for(transaction of person.transactions; track transaction) {
+      <li>
+        {{ financeService.transactionHistory(transaction) }}
+      </li>
+      }
+    </ul>
+    <div class="person__transactionsTotal">
+      @if(person.debt > 0) {
+      <p><strong>Total dept:</strong> {{ person.debt | currency : "EUR" }}</p>
+      } @if (person.loan > 0) {
+      <p>
+        <strong>Total loan:</strong>
+        {{ person.loan | currency : "EUR" }}
+      </p>
+      }
+    </div>
+
+    @if($index < persons.length - 1) {
+    <mat-divider></mat-divider>
+    } }
+  </div>
+  <mat-paginator
+    class="paginator"
+    [length]="length"
+    (page)="handlePageEvent($event)"
+    [pageSizeOptions]="pageSizeOptions"
+    [showFirstLastButtons]="showFirstLastButtons"
+    [hidePageSize]="hidePageSize"
+    [pageIndex]="pageIndex"
+  ></mat-paginator>
+</div>

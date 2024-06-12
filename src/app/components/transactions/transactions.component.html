@@ -1,0 +1,48 @@
+<div class="container flex">
+  <h2 class="transaction__title">New transaction</h2>
+  <form [formGroup]="form">
+    <mat-form-field appearance="outline" class="form__field">
+      <mat-label>Transaction type</mat-label>
+      <mat-select formControlName="type">
+        <mat-select-trigger class="form__type">{{
+          form.controls.type.value
+        }}</mat-select-trigger>
+        @for (type of transactionTypes; track type) {
+        <mat-option class="form__type" [value]="type">{{ type }}</mat-option>
+        }
+      </mat-select>
+      <mat-error>Please select a transaction type</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form__field">
+      <mat-label>{{
+        form.controls.type.value === "repay" ? "Repayer" : "Lender"
+      }}</mat-label>
+      <mat-select formControlName="from">
+        @for (person of filteredPersonsFrom |async; track person) {
+        <mat-option [value]="person">{{ person.name }}</mat-option>
+        }
+      </mat-select>
+      <mat-error>Please select a person</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form__field">
+      <mat-label>{{
+        form.controls.type.value === "repay" ? "Payee" : "Borrower"
+      }}</mat-label>
+      <mat-select formControlName="to">
+        @for (person of filteredPersonsTo |async; track person) {
+        <mat-option [value]="person">{{ person.name }}</mat-option>
+        }
+      </mat-select>
+      <mat-error>Please select a person</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form__field">
+      <mat-label>Amount</mat-label>
+      <input matInput type="number" formControlName="amount" />
+      <mat-icon matSuffix>euro</mat-icon>
+      <mat-error>Please enter a valid amount</mat-error>
+    </mat-form-field>
+  </form>
+  <button mat-flat-button (click)="makeTransaction()" class="transaction__btn">
+    Make Transaction
+  </button>
+</div>
