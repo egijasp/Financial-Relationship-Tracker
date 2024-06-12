@@ -11,7 +11,13 @@ You can try it out: https://financial-relationship-tracker.vercel.app/
 
 ### Clone the repository
 
+Using SSH:
+
 `git clone git@github.com:egijasp/Financial-Relationship-Tracker.git`
+
+Using HTTPS:
+
+`git clone https://github.com/egijasp/Financial-Relationship-Tracker.git`
 
 `cd Financial-Relationship-Tracker`
 
