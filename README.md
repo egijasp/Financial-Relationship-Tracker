@@ -1,13 +1,15 @@
 # Financial Relationship Tracker
 
-`https://financial-relationship-tracker.vercel.app/`
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.2.
 The application allows users to manage loans and debts between individuals, track transactions, and identify the biggest lender and debtor.
 
+### Visit
+
+You can try it out: [https://financial-relationship-tracker.vercel.app/]
+
 ## Setup instructions
 
-### clone the repository
+### Clone the repository
 
 `git clone https://github.com/your-username/loan-management-system.git`
 `cd loan-management-system`
