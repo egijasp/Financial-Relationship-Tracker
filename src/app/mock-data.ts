@@ -1,4 +1,4 @@
-import { Person } from './transaction';
+import { Person } from './models/interfaces/person';
 
 export const people: Person[] = [
   {
