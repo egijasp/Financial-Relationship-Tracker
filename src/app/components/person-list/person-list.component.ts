@@ -3,9 +3,9 @@ import { MatListModule } from '@angular/material/list';
 import { CommonModule } from '@angular/common';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
-import { Person } from '../../transaction';
 import { TransactionService } from '../../transaction.service';
 import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
+import { Person } from '../../models/interfaces/person';
 
 @Component({
   selector: 'app-person-list',

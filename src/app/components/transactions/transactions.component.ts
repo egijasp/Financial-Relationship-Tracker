@@ -3,7 +3,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { TransactionService } from '../../transaction.service';
-import { Person, Transaction, TransactionType } from '../../transaction';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FormBuilder, Validators } from '@angular/forms';
@@ -11,6 +10,9 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Subscription, combineLatest, filter, map, startWith } from 'rxjs';
 import { toObservable } from '@angular/core/rxjs-interop';
+import { TransactionType } from '../../models/enum/transaction-type';
+import { Person } from '../../models/interfaces/person';
+import { Transaction } from '../../models/interfaces/transaction';
 
 @Component({
   selector: 'app-transactions',
