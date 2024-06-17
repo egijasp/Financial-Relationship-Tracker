@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Person, Transaction } from './transaction';
 import { people } from './mock-data';
+import { Person } from './models/interfaces/person';
+import { Transaction } from './models/interfaces/transaction';
 
 @Injectable({
   providedIn: 'root',
